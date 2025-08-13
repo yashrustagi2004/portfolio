@@ -1,0 +1,157 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yash Rustagi - Cyber Security Portfolio">
+  <title>Yash Rustagi | Cyber Security Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="scanlines"></div>
+  
+  <!-- HEADER -->
+  <header>
+    <div class="logo">>_ Yash Rustagi</div>
+    <nav id="navbar">
+      <a href="#objective">Objective</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-toggle">☰</div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+    <h1 id="typewrite"></h1>
+    <p class="subtitle">Red Team Specialist in the making — uncovering vulnerabilities, strengthening defences, and enhancing cyber resilience.</p>
+  </section>
+
+  <!-- OBJECTIVE -->
+  <section class="fadein" id="objective">
+    <h2>Objective</h2>
+    <p>I am a dedicated cybersecurity enthusiast specialising in offensive security. I aim to build a career as a red team specialist, uncovering critical vulnerabilities, strengthening defences, and enhancing overall cyber resilience.</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="fadein" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Phishing Email Detection using NLP</h3>
+        <p>Chrome extension for phishing detection using NLP, email headers analysis, and URL scanning; MERN Stack, Google Auth, Jenkins CI/CD.</p>
+        <a href="https://github.com/yashrustagi2004/Kingfisher" target="_blank">🔗 View GitHub Repository</a>
+      </div>
+      <div class="project-card">
+        <h3>Windows Defender Bypass</h3>
+        <p>Custom PowerShell reverse shell for persistent admin access to Windows 11. Evaded Defender using advanced obfuscation.</p>
+      </div>
+      <div class="project-card">
+        <h3>Anomaly Detection in Human Behaviour</h3>
+        <p>Python ML model for abnormal behaviour detection in video surveillance, with fuzzy inference for adaptive threat classification.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="fadein" id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech CSE (Cyber Security)</strong>, NIIT University (2022-26), CGPA: 9.48</p>
+    <p><strong>XII, DAV Public School (CBSE)</strong> – 2022</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="fadein" id="skills">
+    <h2>Skills</h2>
+    <div class="skill-blocks">
+      <div class="skill-chip">Burp Suite</div>
+      <div class="skill-chip">Metasploit</div>
+      <div class="skill-chip">Wireshark</div>
+      <div class="skill-chip">OWASP ZAP</div>
+      <div class="skill-chip">Nmap</div>
+      <div class="skill-chip">Python</div>
+      <div class="skill-chip">JavaScript</div>
+      <div class="skill-chip">Bash</div>
+      <div class="skill-chip">PowerShell</div>
+      <div class="skill-chip">ISO 27001</div>
+      <div class="skill-chip">GDPR</div>
+      <div class="skill-chip">HIPAA</div>
+      <div class="skill-chip">PCI-DSS</div>
+      <div class="skill-chip">MySQL</div>
+      <div class="skill-chip">MongoDB</div>
+      <div class="skill-chip">Docker</div>
+      <div class="skill-chip">Git</div>
+      <div class="skill-chip">Jenkins</div>
+      <div class="skill-chip">Linux</div>
+      <div class="skill-chip">Windows</div>
+    </div>
+  </section>
+
+  <!-- NEW ACHIEVEMENTS -->
+  <section class="fadein" id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Industrial Intrusion CTF: 5th Place out of 50k+ team</li>
+    </ul>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="fadein" id="certifications">
+    <h2>Certifications</h2>
+    <p>Certified Ethical Hacker (CEH) - EC-Council (28th July 2025)</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="fadein" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yash.rustagi22@st.niituniversity.in">yash.rustagi22@st.niituniversity.in</a></p>
+    <p>
+      <a href="https://linkedin.com">LinkedIn</a> |
+      <a href="https://medium.com">Medium</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Yash Rustagi | Built with ❤️ &lt;/&gt; | Cyber Security Portfolio</p>
+  </footer>
+
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", function() {
+      document.getElementById("navbar").classList.toggle("show");
+    });
+
+    const txt = "Cybersecurity Enthusiast | Offensive Security";
+    let i = 0;
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("typewrite").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, 45);
+      }
+    }
+    window.onload = () => {
+      typeWriter();
+    };
+
+    const faders = document.querySelectorAll('.fadein');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fade => {
+      observer.observe(fade);
+    });
+  </script>
+</body>
+</html>
