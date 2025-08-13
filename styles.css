@@ -128,6 +128,14 @@ section {
   color: #00ccff;
 }
 
+#skills h3 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #00ccff;
+  font-family: 'Fira Code', monospace;
+  font-size: 1.2rem;
+}
+
 .skill-blocks {
   display: flex;
   flex-wrap: wrap;
