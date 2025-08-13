@@ -166,6 +166,50 @@ ul {
   list-style: square inside;
 }
 
+
+/* Contact Section Styling */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(145deg, #101e14, #052c22);
+  border: 1.5px solid #00ff8840;
+  padding: 10px 18px;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px #00ff8840;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: linear-gradient(145deg, #04ffd4, #00ccff);
+  color: #0a0a0a;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px #04ffd480;
+}
+
+.contact-item:hover a {
+  color: #0a0a0a;
+}
+
+.contact-item a {
+  color: #00ff88;
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  transition: color 0.2s ease;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+}
+
+
 footer {
   text-align: center;
   padding: 25px;
